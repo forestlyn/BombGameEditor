@@ -1,0 +1,43 @@
+{
+    "UIObjectDatasInJson": {
+        "Box": [
+            "Ground",
+            "Box"
+        ],
+        "Flag": [
+            "Ground",
+            "Flag"
+        ],
+        "Ground": [
+            "Ground"
+        ],
+        "Wall": [
+            "Ground",
+            "Wall"
+        ],
+        "Door1": [
+            "Ground",
+            "Door1"
+        ],
+        "PressBoard1": [
+            "Ground",
+            "PressBoard1"
+        ],
+        "Door2": [
+            "Ground",
+            "Door2"
+        ],
+        "PressBoard2": [
+            "Ground",
+            "PressBoard2"
+        ],
+        "Player": [
+            "Ground",
+            "Player"
+        ],
+        "Door1_O": [
+            "Ground",
+            "Door1_O"
+        ]
+    }
+}
