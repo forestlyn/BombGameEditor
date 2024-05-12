@@ -6,4 +6,5 @@ public enum KEDeliverType
     ClockWise,//顺时针
     Motivate,//激发
     Calculate,//计算
+    WildCard,//通配
 }

@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,4 +19,12 @@ public class MyData : ScriptableObject
     public int boxRotateAngle;
     public int boxAdd;
     public int boxMulti;
+
+
+    public MyData Copy()
+    {
+        string s = JsonConvert.SerializeObject(this);
+        MyData newData = JsonConvert.DeserializeObject<MyData>(s);
+        return newData;
+    }
 }

@@ -49,7 +49,7 @@ public class MyMouse : MonoBehaviour
     public void HitRight(RaycastHit2D hit)
     {
         if (hit.collider == null) { return; }
-        Debug.Log("HitRight:"+hit.collider.tag);
+        //Debug.Log("HitRight:"+hit.collider.tag);
         switch (hit.collider.tag)
         {
             //case "UIMapObject":

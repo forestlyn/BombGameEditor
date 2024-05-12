@@ -1,8 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class MapState
@@ -34,6 +30,6 @@ public class MapState
     {
         MapName[x, y] = name;
         Map[x, y] = value;
-        Debug.Log(x+" " + y + "set:" + (value == null ? 0 : value.Count));
+        //Debug.Log(x+" " + y + "set:" + (value == null ? 0 : value.Count));
     }
 }

@@ -46,13 +46,13 @@ public class MapManager : MonoBehaviour
         Debug.Log(path);
         var text = JsonConvert.SerializeObject(mapState);
         Debug.Log(text);
-        for (int i = 0; i < mapState.length; i++)
-        {
-            for (int j = 0; j < mapState.width; j++)
-            {
-                Debug.Log("mapcount:" + mapState.Map[i, j].Count);
-            }
-        }
+        //for (int i = 0; i < mapState.length; i++)
+        //{
+        //    for (int j = 0; j < mapState.width; j++)
+        //    {
+        //        Debug.Log("mapcount:" + mapState.Map[i, j].Count);
+        //    }
+        //}
         if (File.Exists(path))
         {
             File.WriteAllText(path, text);

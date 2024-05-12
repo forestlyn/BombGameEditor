@@ -1340,6 +1340,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6320664638028128609, guid: d380cd16e091ca54dae7eace83eb0612, type: 3}
+      propertyPath: m_Options.m_Options.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320664638028128609, guid: d380cd16e091ca54dae7eace83eb0612, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[6].m_Text
+      value: WildCard
+      objectReference: {fileID: 0}
     - target: {fileID: 7871130501108102864, guid: d380cd16e091ca54dae7eace83eb0612, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

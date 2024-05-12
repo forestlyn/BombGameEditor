@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -22,12 +23,18 @@ public class MapObject : MonoBehaviour
 
     public void SetData(string name,List<MyData> data)
     {
-        Debug.Log(data.Count + "name:" + name);
+        //Debug.Log(data.Count + "name:" + name);
         if (data == null || data.Count == 0)
             return;
-        this.data = data;
+        List<MyData> value = new List<MyData>();
+        foreach (var item in data)
+        {
+            var newItem = item.Copy();
+            value.Add(newItem);
+        }
+        this.data = value;
         text.text = name;
-        MapManager.Instance.SetMapStateData(x, y, name, data);
+        MapManager.Instance.SetMapStateData(x, y, name, value);
     }
     public void SetPos(int x, int y)
     {
