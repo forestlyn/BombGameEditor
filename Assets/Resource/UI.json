@@ -15,29 +15,22 @@
             "Ground",
             "Wall"
         ],
-        "Door1": [
+        "BoxTarget": [
             "Ground",
-            "Door1"
+            "BoxTarget"
         ],
-        "PressBoard1": [
+        "BoxTarget2": [
             "Ground",
-            "PressBoard1"
-        ],
-        "Door2": [
-            "Ground",
-            "Door2"
-        ],
-        "PressBoard2": [
-            "Ground",
-            "PressBoard2"
+            "BoxTarget",
+            "Box"
         ],
         "Player": [
             "Ground",
             "Player"
         ],
-        "Door1_O": [
+        "Water": [
             "Ground",
-            "Door1_O"
+            "Water"
         ]
     }
 }

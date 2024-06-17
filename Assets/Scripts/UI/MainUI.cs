@@ -14,34 +14,53 @@ public class MainUI : MonoBehaviour
     public Button saveButton;
     public Button loadButton;
     public Button createButton;
+    public Button changeButton;
 
-    public GameObject panel;
+    public GameObject inputpanel;
 
     public InputField inputLength;
     public InputField inputWidth;
     public Button OkButton;
+    public Button cancelButton;
+
+    public GameObject changepanel;
+
     private void Start()
     {
         saveButton.onClick.AddListener(SaveFile);
         loadButton.onClick.AddListener(LoadFile);
-        createButton.onClick.AddListener(OpenPanel);
+        createButton.onClick.AddListener(OpenInputPanel);
+        changeButton.onClick.AddListener(OpenChangePanel);
 
-        OkButton.onClick.AddListener(ClosePanel);
+        OkButton.onClick.AddListener(CloseAndApplyPanel);
+        cancelButton.onClick.AddListener(CloseAndCancelPanel);
     }
 
-    private void ClosePanel()
+    private void CloseAndApplyPanel()
     {
-        panel.SetActive(false);
+        inputpanel.SetActive(false);
         int l = int.Parse(inputLength.text);
         int w = int.Parse(inputWidth.text);
         MapManager.Instance.CreateMap(l, w);
+        MyMouse.HasOpenPanel = false;
     }
-
-    private void OpenPanel()
+    private void CloseAndCancelPanel()
     {
-        panel.SetActive(true);
+        inputpanel.SetActive(false);
+        MyMouse.HasOpenPanel = false;
     }
 
+    private void OpenInputPanel()
+    {
+        MyMouse.HasOpenPanel = true;
+        inputpanel.SetActive(true);
+    }
+
+    public void OpenChangePanel()
+    {
+        MyMouse.HasOpenPanel = true;
+        changepanel.SetActive(true);
+    }
     private void LoadFile()
     {
         FileOpenDialog dialog = new FileOpenDialog();

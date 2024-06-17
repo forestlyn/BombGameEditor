@@ -20,7 +20,6 @@ public class MyData : ScriptableObject
     public int boxAdd;
     public int boxMulti;
 
-
     public MyData Copy()
     {
         string s = JsonConvert.SerializeObject(this);

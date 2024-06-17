@@ -54,8 +54,8 @@ public class Map : MonoBehaviour
                 {
                     obj.transform.position = new Vector2(i + offset_x, j + offset_y);
                     var map = obj.GetComponent<MapObject>();
-                    map.SetData(mapState.MapName[i, j], mapState.Map[i, j]);
                     map.SetPos(i, j);
+                    map.SetData(mapState.MapName[i, j], mapState.Map[i, j]);
                 }
                 else
                 {

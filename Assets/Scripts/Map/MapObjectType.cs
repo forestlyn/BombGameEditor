@@ -2,11 +2,15 @@
 public enum MapObjectType
 {
     Ground,
-    Wall,
+    Wall, 
     Box,
+    BoxTarget,
     Bomb,
-    Door,
-    PressBoard,
     Flag,
     Player,
+    Water,
+
+    //ÆúÓÃ
+    Door,
+    PressBoard,
 }

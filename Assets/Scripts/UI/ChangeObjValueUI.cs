@@ -12,6 +12,8 @@ public class ChangeObjValueUI : MonoBehaviour
     public Button Apply;
     public Button Cancel;
     public GameObject ChangeObjValueUIPanel;
+
+    private MapObject mapObject;
     private void Awake()
     {
         if (instance == null)
@@ -28,11 +30,13 @@ public class ChangeObjValueUI : MonoBehaviour
         Cancel.onClick.AddListener(OnClickCancel);
         ChangeObjValueUIPanel.SetActive(false);
     }
-    public void OnRightClick(List<MyData> myDatas)
+    public void OnRightClick(MapObject mapObj)
     {
-        MyData data = myDatas.Find(x => x.type == MapObjectType.Box);
+        mapObject = mapObj;
+        MyData data = mapObj.Data.Find(x => x.type == MapObjectType.Box);
         if (data != null)
         {
+            MyMouse.HasOpenPanel = true;
             ChangeObjValueUIPanel.SetActive(true);
             mapObjUI.Open(data);
         }
@@ -42,10 +46,14 @@ public class ChangeObjValueUI : MonoBehaviour
     {
         ChangeObjValueUIPanel.SetActive(false);
         mapObjUI.Close();
+        mapObject?.RefreshSprite();
+        mapObject = null;
+        MyMouse.HasOpenPanel = false;
     }
     public void OnClickCancel()
     {
         ChangeObjValueUIPanel.SetActive(false);
         mapObjUI.Clear();
+        MyMouse.HasOpenPanel = false;
     }
 }

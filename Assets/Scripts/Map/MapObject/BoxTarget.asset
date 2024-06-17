@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d0f9eb982bf4c54081474593cb04156, type: 3}
-  m_Name: Door1_O
+  m_Name: BoxTarget
   m_EditorClassIdentifier: 
-  Name: Door1_O
-  type: 8
+  Name: BoxTarget
+  type: 3
   height: 0
-  id: 1
-  open: 1
+  id: 0
+  open: 0
   boxMaterialType: 0
   boxKEType: 0
   boxDir: 0

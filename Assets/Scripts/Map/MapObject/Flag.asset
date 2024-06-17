@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Flag
   m_EditorClassIdentifier: 
   Name: Flag
-  type: 6
+  type: 5
   height: 0
   id: 0
+  open: 0
+  boxMaterialType: 0
+  boxKEType: 0
+  boxDir: 0
+  boxRotateAngle: 0
+  boxAdd: 0
+  boxMulti: 0

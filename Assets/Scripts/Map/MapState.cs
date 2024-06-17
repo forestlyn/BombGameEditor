@@ -30,6 +30,6 @@ public class MapState
     {
         MapName[x, y] = name;
         Map[x, y] = value;
-        //Debug.Log(x+" " + y + "set:" + (value == null ? 0 : value.Count));
+        Debug.Log(x + " " + y + name + "set:" + (value == null ? 0 : value.Count));
     }
 }

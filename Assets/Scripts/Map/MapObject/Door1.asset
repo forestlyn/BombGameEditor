@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Door1
   m_EditorClassIdentifier: 
   Name: Door1
-  type: 4
+  type: 8
   height: 1
   id: 1
+  open: 0
+  boxMaterialType: 0
+  boxKEType: 0
+  boxDir: 0
+  boxRotateAngle: 0
+  boxAdd: 0
+  boxMulti: 0
