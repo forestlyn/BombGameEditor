@@ -55,16 +55,16 @@ public class MapManager : MonoBehaviour
                 ReChangeMap(l - 1, w, 0, 0);
                 break;
             case ChangeMapType.AddUp:
-                ReChangeMap(l, w + 1, 0, 1);
-                break;
-            case ChangeMapType.RemoveUp:
-                ReChangeMap(l, w - 1, 0, -1);
-                break;
-            case ChangeMapType.AddDown:
                 ReChangeMap(l, w + 1, 0, 0);
                 break;
-            case ChangeMapType.RemoveDown:
+            case ChangeMapType.RemoveUp:
                 ReChangeMap(l, w - 1, 0, 0);
+                break;
+            case ChangeMapType.AddDown:
+                ReChangeMap(l, w + 1, 0, 1);
+                break;
+            case ChangeMapType.RemoveDown:
+                ReChangeMap(l, w - 1, 0, -1);
                 break;
             default:
                 break;
@@ -84,7 +84,7 @@ public class MapManager : MonoBehaviour
         {
             for (int j = y >= 0 ? y : 0; j < newMap.width && j < y + mapState.width; j++)
             {
-                Debug.Log(i + " " + j + " " + x + " " + y + mapState.MapName[i - x, j - y]);
+                //Debug.Log(i + " " + j + " " + x + " " + y + mapState.MapName[i - x, j - y]);
                 newMap.Set(i, j, mapState.MapName[i - x, j - y], mapState.Map[i - x, j - y]);
             }
         }
