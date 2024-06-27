@@ -55,7 +55,7 @@ public class MapObjUI : MonoBehaviour
             data.boxKEType = (KEDeliverType)boxKEtype.value;
             data.boxDir = (Dir)boxDir.value;
             data.boxRotateAngle = (int)boxRotateAngle.value;
-            data.boxAdd = int.Parse(boxAdd.text);
+            data.boxAdd = 1;
             data.boxMulti = int.Parse(boxMulti.text);
         }
         catch
